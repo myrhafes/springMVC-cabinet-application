@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorator="template">
+<head>
+<meta charset="utf-8">
+<title>Form patient</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="container mt-5">
+			<div class="card ">
+				<div class="card-header">Patient enregistrer!</div>
+				<div class="card-body">
+					<label class="control-label">Id :</label>
+					<strong><label class="control-label" th:text="${patient.id}"></label></strong></br>
+					<label class="control-label">Name :</label>
+					<strong><label class="control-label" th:text="${patient.name}"></label></strong></br>
+					<label class="control-label">Date de naissance :</label>
+					<strong><label class="control-label" th:text="${patient.dateNaissance}"></label></strong></br>
+					<label class="control-label">Malade :</label>
+					<strong><label class="control-label" th:text="${patient.malade}"></label></strong></br>
+					<a th:href="@{patients}" class="btn btn-primary" role="button">Retour</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
